@@ -88,4 +88,79 @@ With `--threaded` option:
 
 `Requests per second:    2166.96 [#/sec] (mean)`
 
+## Sinatra application.
+### Application
+The [application](https://github.com/antonmi/node_vs_eventmachine/blob/master/sinatra/app.rb):
 
+``` ruby
+require 'sinatra'
+
+set :server, :thin
+set :host, '127.0.0.1'
+set :port, 5002
+set :logging, false
+set :threaded, false #this option set to true by default
+set :environment, 'production'
+
+get '/' do
+  "Hello world"
+end
+```
+
+### Results
+
+`Requests per second:    2895.68 [#/sec] (mean))`
+
+With `set :threaded, true`:
+
+`Requests per second:    977.92 [#/sec] (mean)`
+
+## AsyncSinatra application.
+### Application
+The [application](https://github.com/antonmi/node_vs_eventmachine/blob/master/async_sinatra/app.rb):
+
+``` ruby
+require 'sinatra/async'
+
+class AsyncTest < Sinatra::Base
+  register Sinatra::Async
+
+  set :threaded, false
+  set :server, :thin
+  set :host, '127.0.0.1'
+  set :port, 5003
+
+  aget '/' do
+    body('Hello world')
+  end
+
+  run!
+end
+```
+
+### Results
+
+`Requests per second:    3285.19 [#/sec] (mean)`
+
+See details [here](https://github.com/antonmi/node_vs_eventmachine/tree/master/async_sinatra)
+
+
+## Express.js application.
+### Application
+The [application](https://github.com/antonmi/node_vs_eventmachine/blob/master/express_js/app.js):
+
+``` javascript
+var express = require('express');
+var app = express();
+app.get('/', function(req, res){
+    res.send('Hello World')
+});
+
+app.listen(6001);
+```
+
+### Results
+
+`Requests per second:    5222.03 [#/sec] (mean)`
+
+See details [here](https://github.com/antonmi/node_vs_eventmachine/tree/master/express_js)
