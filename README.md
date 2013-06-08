@@ -37,7 +37,7 @@ EM.run{
 
 `Requests per second:    14710.01 [#/sec] (mean)`
 
-Details [here](https://github.com/antonmi/node_vs_eventmachine/tree/master/evma_httpserver)
+See details [here](https://github.com/antonmi/node_vs_eventmachine/tree/master/evma_httpserver)
 
 
 ## node.js http server
@@ -58,3 +58,34 @@ server.listen(6000);
 ### Results
 
 `Requests per second:    7869.49 [#/sec] (mean)`
+
+See details [here](https://github.com/antonmi/node_vs_eventmachine/tree/master/node)
+
+## Thin server. Simple Rack application
+### Application
+The [application](https://github.com/antonmi/node_vs_eventmachine/blob/master/thin/config.ru):
+
+``` ruby
+class App
+  def call(env)
+    [200, {'Content-Type' => 'text/html'}, 'Hello world']
+  end
+end
+
+run App.new
+
+
+#thin -R config.ru start -p5001
+```
+
+### Results
+
+`Requests per second:    7667.10 [#/sec] (mean)`
+
+See details [here](https://github.com/antonmi/node_vs_eventmachine/tree/master/node)
+
+With `--threaded` option:
+
+`Requests per second:    2166.96 [#/sec] (mean)`
+
+
