@@ -5,11 +5,22 @@
 ## Total results:
 
 ```
-------
-Application         |      1000*Req/sec
-------
-evma_httpserver     |      14.7
-------
+==============================================
+=  Application         |      1000*Req/sec   =
+=--------------------------------------------=
+=  evma_httpserver     |      14.7
+=--------------------------------------------=
+=  Node.js http server |      7.9            =
+=--------------------------------------------=
+=  Thin server         |       7.7           =
+=--------------------------------------------=
+=  Sinatra app         |       2.9           =
+=--------------------------------------------=
+=  AsyncSinatra app            3.3           =
+=--------------------------------------------=
+=  Express.js app              5.2           =
+==============================================
+
 ```
 ## evma_httpserver
 
@@ -49,7 +60,7 @@ EM.run{
 See details [here](https://github.com/antonmi/node_vs_eventmachine/tree/master/evma_httpserver).
 
 
-## node.js http server
+## Node.js http server
 ### Application
 The [application](https://github.com/antonmi/node_vs_eventmachine/blob/master/node/node.js):
 
