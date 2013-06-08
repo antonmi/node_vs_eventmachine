@@ -1,4 +1,4 @@
-`
+```
 antonmi@antonmi-note ~ $ ab -n 100000 -c 100 http://127.0.0.1:5000/
 This is ApacheBench, Version 2.3 <$Revision: 655654 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
@@ -54,4 +54,4 @@ Percentage of the requests served within a certain time (ms)
   98%     13
   99%     16
  100%     18 (longest request)
-`
+```
