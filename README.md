@@ -37,7 +37,7 @@ EM.run{
 
 `Requests per second:    14710.01 [#/sec] (mean)`
 
-See details [here](https://github.com/antonmi/node_vs_eventmachine/tree/master/evma_httpserver)
+See details [here](https://github.com/antonmi/node_vs_eventmachine/tree/master/evma_httpserver).
 
 
 ## node.js http server
@@ -59,7 +59,7 @@ server.listen(6000);
 
 `Requests per second:    7869.49 [#/sec] (mean)`
 
-See details [here](https://github.com/antonmi/node_vs_eventmachine/tree/master/node)
+See details [here](https://github.com/antonmi/node_vs_eventmachine/tree/master/node).
 
 ## Thin server. Simple Rack application
 ### Application
@@ -82,7 +82,7 @@ run App.new
 
 `Requests per second:    7667.10 [#/sec] (mean)`
 
-See details [here](https://github.com/antonmi/node_vs_eventmachine/tree/master/node)
+See details [here](https://github.com/antonmi/node_vs_eventmachine/tree/master/node).
 
 With `--threaded` option:
 
@@ -115,6 +115,8 @@ With `set :threaded, true`:
 
 `Requests per second:    977.92 [#/sec] (mean)`
 
+See details [here](https://github.com/antonmi/node_vs_eventmachine/tree/master/sinatra).
+
 ## AsyncSinatra application.
 ### Application
 The [application](https://github.com/antonmi/node_vs_eventmachine/blob/master/async_sinatra/app.rb):
@@ -142,7 +144,7 @@ end
 
 `Requests per second:    3285.19 [#/sec] (mean)`
 
-See details [here](https://github.com/antonmi/node_vs_eventmachine/tree/master/async_sinatra)
+See details [here](https://github.com/antonmi/node_vs_eventmachine/tree/master/async_sinatra).
 
 
 ## Express.js application.
@@ -163,4 +165,4 @@ app.listen(6001);
 
 `Requests per second:    5222.03 [#/sec] (mean)`
 
-See details [here](https://github.com/antonmi/node_vs_eventmachine/tree/master/express_js)
+See details [here](https://github.com/antonmi/node_vs_eventmachine/tree/master/express_js).
