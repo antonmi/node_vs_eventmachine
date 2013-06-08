@@ -37,7 +37,24 @@ EM.run{
 
 `Requests per second:    14710.01 [#/sec] (mean)`
 
-Details [here](https://github.com/antonmi/node_vs_eventmachine/blob/master/evma_httpserver/evma_httpserver.rb)
+Details [here](https://github.com/antonmi/node_vs_eventmachine/tree/master/evma_httpserver)
 
 
 ## node.js http server
+### Application
+The [application](https://github.com/antonmi/node_vs_eventmachine/blob/master/node/node.js):
+
+``` javascript
+var http = require('http');
+
+var server = http.createServer(function (request, response) {
+    response.writeHead(200, {"Content-Type": "text/html"});
+    response.end("Hello World");
+});
+
+server.listen(6000);
+```
+
+### Results
+
+`Requests per second:    7869.49 [#/sec] (mean)`
