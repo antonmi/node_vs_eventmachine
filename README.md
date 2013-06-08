@@ -3,6 +3,7 @@
 ### Be careful - synthetic tests!
 
 ## Total results:
+
 ------
 Application         |      1000*Req/sec
 ------
