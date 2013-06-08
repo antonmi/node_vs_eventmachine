@@ -7,7 +7,8 @@
 ### Application
 The [application](https://github.com/antonmi/node_vs_eventmachine/blob/master/evma_httpserver/evma_httpserver.rb):
 
-`require 'eventmachine'
+``` ruby
+require 'eventmachine'
 require 'evma_httpserver'
 
 class TestServer < EM::Connection
@@ -29,7 +30,8 @@ end
 
 EM.run{
   EM.start_server '127.0.0.1', 5000, TestServer
-}`
+}
+```
 
 ### Results
 
