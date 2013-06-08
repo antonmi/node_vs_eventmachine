@@ -2,7 +2,7 @@
 
 
 ## evma_httpserver
-[evma_httpserver](https://github.com/eventmachine/evma_httpserver
+[evma_httpserver](https://github.com/eventmachine/evma_httpserver)
 
 ### Application
 The [application](https://github.com/antonmi/node_vs_eventmachine/blob/master/evma_httpserver/evma_httpserver.rb)
